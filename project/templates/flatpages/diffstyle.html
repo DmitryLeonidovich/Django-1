@@ -1,0 +1,33 @@
+{% block content %}
+<html>
+<head>
+<title>{{ flatpage.title }}</title>
+</head>
+{% load static %}
+<link href="{% static 'css/styles.css' %}" rel="stylesheet" />
+<body class="text-center">
+
+<style>
+.times {
+font-family: "Times New Roman", serif;
+}
+.courier {
+font-family: Courier, monospace;
+}
+</style>
+
+
+<p class = "courier">Тут показаны</p>
+<p class = "times"><h1><i>{{ flatpage.title }}</i></h1></p>
+
+
+<hr>
+<p><span class="text-success">{{ flatpage.title }}</span>...{{flatpage.content}}</p>
+<h1 class="h2">{{flatpage.content}}</h1>
+<div class="h4"><i>{{flatpage.content}}</i></div>
+<p class="text-warning">{{flatpage.content}}</p>
+
+</body>
+</html>
+{% endblock content %}
+
